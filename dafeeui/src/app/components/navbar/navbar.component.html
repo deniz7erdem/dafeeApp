@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span> DafeeApp
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-md-center" [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink='/' >DafeApp <small>Alpha</small></a>
+            </li>
+
+            <li class="nav-item" *ngIf="durum()==true">
+                <a class="nav-link" routerLink='/'>Ayarlar</a>
+                <!-- <div class="dropdown-menu">
+                    <a class="dropdown-item" >Masa Ekle</a>
+                    <a class="dropdown-item" href="#">Ürün Ekle</a>
+                    <a class="dropdown-item" href="#">Genel</a>
+                </div> -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="durum()==true" (click)="logout()" routerLink='/login'>Çıkış Yap</a>
+                <a class="nav-link" *ngIf="durum()==false" routerLink='/login'>Giriş Yap</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="modal fade" id="masaEkModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Masa Ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" [(ngModel)]="masaKaydet.no" class="form-control" placeholder="Masa Adı" name="masaAd">
+                    <div class="input-group-append"><button (click)="postMasa(masaKaydet)" class="btn btn-outline-primary">Ekle</button></div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Masa Adı</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let m of masa">
+                            <td>{{m.no}}</td>
+                            <td> <button (click)="delMasa(m)" class="btn btn-danger">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div> -->

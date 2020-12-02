@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let masa of masalar">
+        <div class="card text-left mt-5">
+            <div class="card-body">
+                <h4 class="card-title">{{masa.no}}</h4>
+                <p class="card-text" *ngIf="masaFiyat(masa.no)>0 else elseBlock"> <span class="badge badge-success">₺ {{ masaFiyat(masa.no) }}</span> </p>
+                <ng-template #elseBlock>
+                    <p class="card-text"> <span class="badge badge-secondary"> ₺ 0</span></p>
+                  </ng-template>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary" routerLink='/masa/{{masa.no}}'>Sipariş</button>
+                    <button *ngIf="masaFiyat(masa.no)!=0" type="button" class="btn btn-danger">Hesap al</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
