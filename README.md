@@ -1,11 +1,11 @@
 # Cafe/Restoran sipariş yönetim sistemi.
 
-dafeeApp Angular ve Express ile geliştirilmiş cafe ve restorantlarda kullanılabilecek, müşterilerin kendilerinin masalardaki QR code'u okutarak erişecekleri web sitesinden siparişlerini verebilmeleri üzerine kurulmuş bir sistemdir.
+dafeeApp Angular ve Express ile geliştirilmiş cafe ve restorantlarda kullanılabilecek, müşterilerin kendilerinin masalardaki QR code'u okutarak erişecekleri web sitesinden siparişlerini verebilmeleri üzerine kurulmuş bir sistemdir. Mobil cihazlarla da uyumlu olabilmesi için Bootstrap ile responsive geliştirilmiştir.
 
 **Sistem Analizi ve Tasarım II Final Ödevim**
 ## Kullanılan Teknolojiler 
 Front end için Angular frameworkü tasarım için Bootstrap kütüphanesini kullandım. Masalara QR kod oluşturmak için ngx-qrcode2(npm adı) kullandım.
-Back end için ExpressJS framework'ü, JWT için jwt-simple(npm adı) ve Veritabanı iletişimi için Mongoose kullandım.</br>
+Back end için ExpressJS framework'ü, JWT için jwt-simple(npm adı) ve Veritabanı iletişimi için Mongoose kullandım.
 
 Bunlar dışında bir çok küçük yardımcı kütüphaneler var package.json dan inceleyebilirsiniz.
 
